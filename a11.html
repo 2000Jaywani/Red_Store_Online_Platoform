@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparks Bank</title>
+    <!-- Including the bootstrap CDN -->
+    <link rel="stylesheet" href= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <script src= "https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script> 
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+    <link rel="stylesheet" href="http://anijs.github.io/lib/anicollection/anicollection.css">
+    <!--Including style sheet-->
+    <link rel="stylesheet" href="index.css">
+    <!-- Icon -->
+    <link rel="icon" height="50px" href="./images/icon.png">
+    <script src="index.js"></script>
+</head>
+<style>
+
+*::selection{
+  background:#800000; color: #fff;
+}
+*{
+  font-family: 'Courgette', cursive
+}
+
+.footer{
+  background-color:#800000; color: #fff;
+  font-weight: 700;
+  padding:3%;
+  text-align: center;
+  justify-content: center;
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: whitesmoke;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 10em;
+  height: 10em;
+  position: relative;
+  background: pink;
+  border-radius: 50%;
+}
+.container .dot {
+  background: darkred;
+  content: "";
+  border-radius: 0.5em;
+  margin-top: -0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1em;
+  height: 1em;
+  animation-name: bounce;
+  animation-duration: 3000ms;
+  animation-iteration-count: infinite;
+  transition-timing-function: cubic-bezier(0, 0.99, 0, 0.1);
+}
+.container-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.dot-a {
+  transform: rotate(0deg);
+}
+.dot-a .dot {
+  animation-delay: 0ms;
+}
+.dot-b {
+  transform: rotate(-22.5deg);
+}
+.dot-b .dot {
+  animation-delay: -187.5ms;
+}
+.dot-c {
+  transform: rotate(-45deg);
+}
+.dot-c .dot {
+  animation-delay: -375ms;
+}
+.dot-d {
+  transform: rotate(-67.5deg);
+}
+.dot-d .dot {
+  animation-delay: -562.5ms;
+}
+.dot-e {
+  transform: rotate(-90deg);
+}
+.dot-e .dot {
+  animation-delay: -750ms;
+}
+.dot-f {
+  transform: rotate(-112.5deg);
+}
+.dot-f .dot {
+  animation-delay: -937.5ms;
+}
+.dot-g {
+  transform: rotate(-135deg);
+}
+.dot-g .dot {
+  animation-delay: -1125ms;
+}
+.dot-h {
+  transform: rotate(-157.5deg);
+}
+.dot-h .dot {
+  animation-delay: -1312.5ms;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translatey(0);
+ }
+  50% {
+    transform: translatey(10em);
+ }
+}
+
+
+
+
+.col-sm{
+  padding:0px;
+}
+.halfcolour{
+  background: linear-gradient(59deg, #ffd6d6 43%, #800000 47%);
+  font-family: 'Courgette', cursive;font-size:1em;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-content{
+  height: 105vh;
+  background-color: #ffd6d6;
+  color: #ffffff;
+  /* padding: 3rem; */
+  border-bottom-left-radius: 32rem;
+  border-bottom-right-radius: 32rem;
+  margin-bottom: 1vh;
+  margin:0px;
+}
+
+    
+/*base code*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  .animated.hinge {
+    -webkit-animation-duration: 70s;
+    animation-duration:7570s;
+  }
+
+/*the animation definition*/
+@-webkit-keyframes slideInRight {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible
+  }
+  50% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+}
+@keyframes slideInRight {
+  0% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible
+  }
+  50% {
+    -webkit-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+  }
+}
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight
+}
+
+/* *************     zoomin        ******************** */
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.5, .5, .5);
+    transform: scale3d(.5, .5, .5)
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: scale3d(.5, .5, .5);
+    transform: scale3d(.5, .5, .5)
+  }
+  50% {
+    opacity: 1
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.5, .5, .5);
+    -ms-transform: scale3d(.5, .5, .5);
+    transform: scale3d(.5, .5, .5)
+  }
+  25% {
+    opacity: 0;
+    -webkit-transform: scale3d(.5, .5, .5);
+    -ms-transform: scale3d(.5, .5, .5);
+    transform: scale3d(.5, .5, .5)
+  }
+  50% {
+    opacity: 1
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn
+}
+
+.selectuser{
+  padding:25% auto;
+  margin:0 auto;
+}
+.userdetails{
+  margin:0 auto;
+  padding:0px 45px;
+}
+table{
+  border:2px solid #800000;
+  width:99%;
+  margin:2px 10px;
+  font-weight: 500;
+}
+table tr td {
+  border:2px solid #800000;
+  padding:1.5% 3%;
+  text-align: center;
+  justify-content: center;
+}
+table tr th {
+  border:2px solid #800000;
+  padding:1.5% 3%;
+  color:#800000;
+  background-color: #ffd6d6;
+  text-align: center;
+  justify-content: center;
+}
+.btn-outline-primary{
+  border-color: #800000;
+  color:#800000;
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open .dropdown-toggle.btn-outline-primary {
+  background-color: #800000;
+  border-color: #800000;
+  color:white;
+} 
+
+.btn-default{
+  background-color: #800000;
+  border:2px solid #800000;
+  color:white;
+  font-weight: 600;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+  border: 2px solid #800000;
+  color:#800000;
+  background-color: transparent;
+  font-weight: 600;
+} 
+select{
+  border:2px solid #800000;
+  padding:2%;
+  border-radius:3px;
+  width:35%;
+}
+input{
+  border:2px solid #800000;
+  padding:2%;
+  border-radius:3px;
+  width:35%;
+
+}
+#myinput input:focus, input:active{
+  border:none;
+
+}
+
+</style>
+
+<body  style="background-color: #800000;" onload="loader()">
+<!-- loader for splash screen -->
+<div id="loading">
+    <div class="wrapper flex-center">
+        <div class="container">
+            <div class="container-dot dot-a">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-b">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-c">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-d">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-e">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-f">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-g">
+            <div class="dot"></div>
+            </div>
+            <div class="container-dot dot-h">
+            <div class="dot"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="hero-content">
+    <div class="container-fluid myclass" style="padding:0px; margin:0px;">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-sm  navbar-toggler navbar-light" style="background-color:transparent; background-color:#ffd6d6; opacity:1;"> 
+            <img  height="90"src="C:\Users\JAY\Downloads\icon.png">
+            &nbsp;
+            <div class="navbar-brand font-weight-bold zoomIn animated" id="title" data-anijs="if: mouseover, do: slideInUp animated" style="color:#800000;font-family: 'Courgette', cursive;font-size:2em;">
+                &nbsp;Sparks Bank
+            </div>
+            <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" style="float:right;">
+                <ul class="navbar-nav ml-auto font-weight-bold"  style="font-size:small; color:pink; "> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="viewcustomers.php" style="color:#800000;font-weight:1em;">
+                            <div style="padding-left:20px;" >
+                                <!-- <i class="material-icons"style="font-size: x-large;text-align:center;">
+                                    account_circle
+                                </i> -->
+                                <img height="60"src="./images/custimg.png">
+                            </div>
+                            View Customers
+                        </a> 
+                    </li> 
+                </ul> 
+            </div>
+        </nav> 
+    
+    <div>
+        <div class="row" style="margin:0px; padding:0px;">
+            <div class="col-sm font-weight-bold typing_effect" style="padding-left:15px;color:#800000;font-family: 'Courgette', cursive;font-size:2.2em;text-align:center;justify-content: center;">
+             <p class="zoomIn animated" style="margin:30% auto;"> <span style="color:#ffd6d6;">T</span><span class="halfcolour">h</span>e Fastest Way To Send Money</p>
+            </div>
+            <div class="col-sm">
+                <img id="square" class="slideInRight animated " height="430"src="./images/money_transfer_4.svg" alt="" style="align-self: flex-end;">
+            </div>
+        </div>
+       
+    </div>
+</div>
+<script>
+setTimeout(function(){$('#loading').hide();}, 500); 
+  var preloader = document.getElementById("loading");
+      function loader(){
+        preloader.style.display = 'none';
+      }
+</script>
+</html>

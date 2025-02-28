@@ -1,0 +1,69 @@
+<html>
+ 
+    <head>
+        <title>Hover Nabvar</title>
+        <link rel="stylesheet" href="StyleHoverNavbar.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    </head>
+ 
+ <style>
+body{
+    margin:0;
+}
+ 
+.menu{
+    text-align: center;
+    line-height: 3.5;
+    border-bottom: 4px solid #E91E63;
+}
+ 
+    .menu a{
+        padding: 22px 0px;
+        margin-right: 40px;
+        font-family: arial;
+        font-size: 18px;
+        text-decoration: none;
+        color: #282929;
+        border-bottom: 3px solid #e91e63;
+         
+        -webkit-animation: down-underline .4s;
+        -moz-animation: down-underline .4s;
+        -o-animation: down-underline .4s;
+        animation: down-underline .4s;
+ 
+        -webkit-transition: all .2s ease-in;
+        -moz-transition: all .2s ease-in;
+        -o-transition: all .3s ease-in;
+        transition: all .3s ease-in;
+    }
+ 
+    .menu a:hover{
+        color:#e91e63;
+        padding: 6px 0px;
+             
+        -webkit-animation: up-underline .4s;
+        -moz-animation: up-underline .4s;
+        -o-animation: up-underline .4s;
+        animation: up-underline .4s;
+    }
+ 
+    .menu a.active{
+        padding: 6px 0;
+    }
+ 
+ </style>
+    <body>
+ 
+        <nav class="menu">
+ 
+            <a href="#" class="active" title="Home"><i class="fas fa-home"></i> Home </a>
+            <a href="#" title="About"><i class="far fa-address-card"></i> About </a>
+            <a href="#" title="Gallery"><i class="fas fa-photo-video"></i> Gallery </a>
+            <a href="#" title="Contact"><i class="fas fa-mobile-alt"></i> Contact </a>
+            <a href="#" title="FAQ"><i class="fas fa-question"></i> FAQ </a>            
+         
+        </nav>
+ 
+    </body>
+ 
+</html>
